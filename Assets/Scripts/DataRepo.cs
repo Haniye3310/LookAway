@@ -7,6 +7,7 @@ public class DataRepo : MonoBehaviour
     public List<PlayerData> Players;
     [NonSerialized] public bool CouldPlayerEnterInput;
     public FixedJoystick Joystick;
+    [NonSerialized] public int NumberOfRound 5;
 }
 [Serializable]
 public class PlayerData

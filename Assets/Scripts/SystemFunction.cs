@@ -111,6 +111,9 @@ public class SystemFunction
             player.Animator.SetFloat("X", 0);
             player.Animator.SetFloat("Y", 0);
         }
+        dataRepo.NumberOfRound--;
+        if (dataRepo.NumberOfRound == 0)
+            return;
         mono.StartCoroutine(Round(mono, dataRepo));
     }
     public static void SelectDirectionRandomly(PlayerData playerData)
