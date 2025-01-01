@@ -21,7 +21,7 @@ AnimatorState:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MakanaDirecrtionTree
+  m_Name: TobiDirecrtionTree
   m_Speed: 1
   m_CycleOffset: 0
   m_Transitions: []
@@ -46,10 +46,10 @@ BlendTree:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MakanaDirecrtionTree
+  m_Name: TobiDirecrtionTree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: ea8823727ae459c45be1a9fc846b42c9, type: 3}
+    m_Motion: {fileID: -203655887218126122, guid: 728072b9eb591ff489966540f090c511, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -57,7 +57,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: ecc18ab6bc7326646ab1f27eed741081, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: 2117179067d6c6f48ae925001391549a, type: 3}
     m_Threshold: 0.25
     m_Position: {x: 0, y: -1}
     m_TimeScale: 1
@@ -65,7 +65,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: ec04c0a52a4764343bbcc76dccf497e0, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: 6f7c58becd428fc41aa20b4328c48f5d, type: 3}
     m_Threshold: 0.5
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -73,7 +73,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: 4e601d6ba8299df4f9fb08caca3007c2, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: 1b62a52223a37bd449f30305093b7e83, type: 3}
     m_Threshold: 0.75
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -81,7 +81,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: 8c9203cccc898da498afe9f01db29adf, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: 9d06833465302004689a4f90541bb660, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
@@ -101,7 +101,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: MakanaAnimatorController
+  m_Name: TobiAnimatorController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: X
