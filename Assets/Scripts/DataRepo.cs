@@ -5,6 +5,8 @@ using UnityEngine;
 public class DataRepo : MonoBehaviour
 {
     public List<PlayerData> Players;
+    [NonSerialized] public bool CouldPlayerEnterInput;
+    public FixedJoystick Joystick;
 }
 [Serializable]
 public class PlayerData
@@ -21,4 +23,5 @@ public enum Direction
     Right = 1, 
     Up = 2,
     Down = 3,
+    Forward = 4
 }
