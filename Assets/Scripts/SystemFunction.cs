@@ -113,12 +113,12 @@ public class SystemFunction
         }
         dataRepo.NumberOfRound--;
         if (dataRepo.NumberOfRound == 0)
-            return;
+            yield break;
         mono.StartCoroutine(Round(mono, dataRepo));
     }
     public static void SelectDirectionRandomly(PlayerData playerData)
     {
-        Random.InitState(System.DateTime.Now.Millisecond);
+        //Random.InitState(System.DateTime.Now.Millisecond);
         int r = Random.Range(0, 5);
         if ((Direction)r == Direction.Left) 
         {
