@@ -49,7 +49,7 @@ BlendTree:
   m_Name: DirectionTree
   m_Childs:
   - serializedVersion: 2
-    m_Motion: {fileID: -203655887218126122, guid: da75c784e258e1e42a819d4502f62b8b, type: 3}
+    m_Motion: {fileID: -203655887218126122, guid: ea8823727ae459c45be1a9fc846b42c9, type: 3}
     m_Threshold: 0
     m_Position: {x: 0, y: 0}
     m_TimeScale: 1
@@ -57,7 +57,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: 04aee6ccf39b7234199645618c204dde, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: ecc18ab6bc7326646ab1f27eed741081, type: 3}
     m_Threshold: 0.25
     m_Position: {x: 0, y: -1}
     m_TimeScale: 1
@@ -65,7 +65,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: 407528a0f498cb649b34ab5cc586dd79, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: ec04c0a52a4764343bbcc76dccf497e0, type: 3}
     m_Threshold: 0.5
     m_Position: {x: -1, y: 0}
     m_TimeScale: 1
@@ -73,7 +73,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: f8a9ed76cae9477489298a1d352d33da, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: 4e601d6ba8299df4f9fb08caca3007c2, type: 3}
     m_Threshold: 0.75
     m_Position: {x: 1, y: 0}
     m_TimeScale: 1
@@ -81,7 +81,7 @@ BlendTree:
     m_DirectBlendParameter: Blend
     m_Mirror: 0
   - serializedVersion: 2
-    m_Motion: {fileID: 4061839508520268033, guid: e0b3716560e03fc48a494fedfadde278, type: 3}
+    m_Motion: {fileID: 4061839508520268033, guid: 8c9203cccc898da498afe9f01db29adf, type: 3}
     m_Threshold: 1
     m_Position: {x: 0, y: 1}
     m_TimeScale: 1
@@ -101,7 +101,7 @@ AnimatorController:
   m_CorrespondingSourceObject: {fileID: 0}
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
-  m_Name: BaoAnimatorController
+  m_Name: MakanaAnimatorController
   serializedVersion: 5
   m_AnimatorParameters:
   - m_Name: X
