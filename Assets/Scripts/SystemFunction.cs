@@ -7,7 +7,7 @@ public class SystemFunction
 {
     public static void Start(MonoBehaviour mono,DataRepo dataRepo)
     {
-        mono.StartCoroutine( Round(dataRepo));
+        mono.StartCoroutine( Round(mono,dataRepo));
     }
 
     public static void Update(DataRepo dataRepo)
@@ -73,7 +73,7 @@ public class SystemFunction
             }
         }
     }
-    public static IEnumerator Round(DataRepo dataRepo)
+    public static IEnumerator Round(MonoBehaviour mono,DataRepo dataRepo)
     {
         yield return new WaitForSeconds(3);
         dataRepo.CouldPlayerEnterInput = true;
@@ -87,6 +87,25 @@ public class SystemFunction
             yield return new WaitForSeconds(1);
         }
         dataRepo.CouldPlayerEnterInput = false;
+        Direction kingFinalDirection = Direction.Forward;
+        foreach(PlayerData player in dataRepo.Players)
+        {
+            if (player.IsKing)
+            {
+                kingFinalDirection = player.PlayerDirection;
+            }
+        }
+        foreach(PlayerData player in dataRepo.Players)
+        {
+            if (!player.IsKing)
+            {
+                if(player.PlayerDirection != kingFinalDirection)
+                {
+                    player.NumberOfMistake++;
+                }
+            }
+        }
+        mono.StartCoroutine(Round(mono, dataRepo));
     }
     public static void SelectDirectionRandomly(PlayerData playerData)
     {

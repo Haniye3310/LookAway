@@ -6,7 +6,7 @@ public class MonoMessageReciever : MonoBehaviour
     // Start is called once before the first execution of Update after the MonoBehaviour is created
     void Start()
     {
-        SystemFunction.Start(_dataRepo);
+        SystemFunction.Start(this,_dataRepo);
     }
 
     // Update is called once per frame

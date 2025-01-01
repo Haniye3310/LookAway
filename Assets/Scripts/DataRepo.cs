@@ -15,7 +15,8 @@ public class PlayerData
     public bool IsKing;
     public bool IsUser;
     public Animator Animator;
-    public Direction PlayerDirection;
+    [NonSerialized]public Direction PlayerDirection;
+    [NonSerialized]public int NumberOfMistake = 0;
 }
 public enum Direction
 {
