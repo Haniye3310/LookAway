@@ -105,6 +105,12 @@ public class SystemFunction
                 }
             }
         }
+        foreach(PlayerData player in dataRepo.Players)
+        {
+            player.PlayerDirection = Direction.Forward;
+            player.Animator.SetFloat("X", 0);
+            player.Animator.SetFloat("Y", 0);
+        }
         mono.StartCoroutine(Round(mono, dataRepo));
     }
     public static void SelectDirectionRandomly(PlayerData playerData)
