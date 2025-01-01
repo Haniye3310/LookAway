@@ -216,7 +216,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 54138170}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: d144694c6d194bd4690a52e6a01dbad5, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -436,8 +436,8 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 131076583}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
-  m_Controller: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 21c876397db702c4b9f71063c689c129, type: 3}
+  m_Controller: {fileID: 9100000, guid: 16e228c694806b84881bea5e54bb0f42, type: 2}
   m_CullingMode: 0
   m_UpdateMode: 0
   m_ApplyRootMotion: 0
@@ -890,7 +890,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d0b8a34cfae1a9547bb43a3bfabe704b, type: 2}
     - target: {fileID: 919132149155446097, guid: 6f7c58becd428fc41aa20b4328c48f5d, type: 3}
       propertyPath: m_Name
-      value: Tobi
+      value: KingTobi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -914,7 +914,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 538457224}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e324607ae0b2b5b4db7cc643724b3402, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -1756,7 +1756,7 @@ PrefabInstance:
       objectReference: {fileID: 2100000, guid: d0b8a34cfae1a9547bb43a3bfabe704b, type: 2}
     - target: {fileID: 919132149155446097, guid: 6f7c58becd428fc41aa20b4328c48f5d, type: 3}
       propertyPath: m_Name
-      value: Tobi2
+      value: Tobi
       objectReference: {fileID: 0}
     m_RemovedComponents: []
     m_RemovedGameObjects: []
@@ -1780,7 +1780,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2015448713}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: e324607ae0b2b5b4db7cc643724b3402, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
@@ -2000,7 +2000,7 @@ Animator:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 2036520473}
   m_Enabled: 1
-  m_Avatar: {fileID: 0}
+  m_Avatar: {fileID: 9000000, guid: 635d746ee2439474c921b65d520d62cb, type: 3}
   m_Controller: {fileID: 0}
   m_CullingMode: 0
   m_UpdateMode: 0
