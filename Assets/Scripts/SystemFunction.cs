@@ -24,7 +24,7 @@ public class SystemFunction
             }
 
 
-            Vector2 joyStickDot= new Vector2(dataRepo.Joystick.Vertical,dataRepo.Joystick.Horizontal);
+            Vector2 joyStickDot= new Vector2(-dataRepo.Joystick.Horizontal,dataRepo.Joystick.Vertical);
 
 
             float distanceToLeft = Vector2.Distance(joyStickDot, new Vector2(-1, 0));
@@ -43,33 +43,44 @@ public class SystemFunction
 
             if (Mathf.Abs(min - distanceToLeft) < 0.1) 
             {
-                userData.Animator.SetFloat("X", -1);
-                userData.Animator.SetFloat("Y", 0);
+                userData.HeadDirection = new Vector2(-1, 0);
                 userData.PlayerDirection = Direction.Left;
             }
             if(Mathf.Abs(min - distanceToRight) < 0.1) 
             {
-                userData.Animator.SetFloat("X", 1);
-                userData.Animator.SetFloat("Y", 0);
+                userData.HeadDirection = new Vector2(1, 0);
                 userData.PlayerDirection = Direction.Right;
             }
             if(Mathf.Abs(min - distanceToUp) < 0.1) 
             {
-                userData.Animator.SetFloat("X", 0);
-                userData.Animator.SetFloat("Y", 1);
+                userData.HeadDirection = new Vector2(0, 1);
                 userData.PlayerDirection = Direction.Up;
             }
             if(Mathf.Abs(min - distanceToDown) < 0.1) 
             {
-                userData.Animator.SetFloat("X", 0);
-                userData.Animator.SetFloat("Y", -1);
+                userData.HeadDirection = new Vector2(0, -1);
                 userData.PlayerDirection = Direction.Down;
             }
             if(Mathf.Abs(min - distanceToForward) < 0.1)
             {
-                userData.Animator.SetFloat("X", 0);
-                userData.Animator.SetFloat("Y", 0);
+                userData.HeadDirection = new Vector2(0, 0);
                 userData.PlayerDirection = Direction.Forward;
+            }
+        }
+
+        for(int i =0; i < dataRepo.Players.Count; i++)
+        {
+            PlayerData p = dataRepo.Players[i];
+
+            Vector2 currentDirection = new Vector2(
+                p.Animator.GetFloat("X"),
+                p.Animator.GetFloat("Y")
+                );
+
+            if (Vector2.Distance(currentDirection, p.HeadDirection) > 0.01)
+            {
+                p.Animator.SetFloat("X",Mathf.Lerp(currentDirection.x,p.HeadDirection.x,Time.deltaTime*10));
+                p.Animator.SetFloat("Y",Mathf.Lerp(currentDirection.y,p.HeadDirection.y,Time.deltaTime*10));
             }
         }
     }
@@ -108,8 +119,7 @@ public class SystemFunction
         foreach(PlayerData player in dataRepo.Players)
         {
             player.PlayerDirection = Direction.Forward;
-            player.Animator.SetFloat("X", 0);
-            player.Animator.SetFloat("Y", 0);
+            player.HeadDirection = new Vector2(0, 0);
         }
         dataRepo.NumberOfRound--;
         if (dataRepo.NumberOfRound == 0)
@@ -122,32 +132,27 @@ public class SystemFunction
         int r = Random.Range(0, 5);
         if ((Direction)r == Direction.Left) 
         {
-            playerData.Animator.SetFloat("X", -1);
-            playerData.Animator.SetFloat("Y", 0);
+            playerData.HeadDirection = new Vector2(-1, 0);
             playerData.PlayerDirection= Direction.Left;
         }
         if ((Direction)r == Direction.Right) 
         {
-            playerData.Animator.SetFloat("X",1);
-            playerData.Animator.SetFloat("Y", 0);
+            playerData.HeadDirection = new Vector2(1, 0);
             playerData.PlayerDirection = Direction.Right;
         }
         if ((Direction)r == Direction.Up) 
         {
-            playerData.Animator.SetFloat("X", 0);
-            playerData.Animator.SetFloat("Y", 1);
+            playerData.HeadDirection = new Vector2(0, 1);;
             playerData.PlayerDirection = Direction.Up;
         }
         if ((Direction)r == Direction.Down) 
         {
-            playerData.Animator.SetFloat("X", 0);
-            playerData.Animator.SetFloat("Y", -1);
+            playerData.HeadDirection = new Vector2(0, -1);
             playerData.PlayerDirection = Direction.Down;
         }
         if ((Direction)r == Direction.Forward)
         {
-            playerData.Animator.SetFloat("X", 0);
-            playerData.Animator.SetFloat("Y", 0);
+            playerData.HeadDirection = new Vector2(0, 0);
             playerData.PlayerDirection = Direction.Forward;
         }
 
