@@ -110,9 +110,17 @@ public class SystemFunction
         {
             if (!player.IsKing)
             {
-                if(player.PlayerDirection != kingFinalDirection)
+                if(player.PlayerDirection == kingFinalDirection)
                 {
                     player.NumberOfMistake++;
+                    for (int i = 0;i < player.Crosses.Count; i++)
+                    {
+                        if (!player.Crosses[i].gameObject.activeSelf)
+                        {
+                            player.Crosses[i].gameObject.SetActive(true);
+                            break;
+                        }
+                    }
                 }
             }
         }
@@ -123,7 +131,22 @@ public class SystemFunction
         }
         dataRepo.NumberOfRound--;
         if (dataRepo.NumberOfRound == 0)
+        {
+            PlayerData playerWithMinMistakes = null;
+            int minMistakes = int.MaxValue; // Start with the maximum possible integer value.
+
+            for (int i = 0; i < dataRepo.Players.Count; i++)
+            {
+                if (!dataRepo.Players[i].IsKing && dataRepo.Players[i].NumberOfMistake < minMistakes)
+                {
+                    minMistakes = dataRepo.Players[i].NumberOfMistake;
+                    playerWithMinMistakes = dataRepo.Players[i];
+                }
+            }
+            dataRepo.ResultPanel.SetActive(true);
+            dataRepo.ResultText.text = playerWithMinMistakes.PlayerGameobject.name+" won!";
             yield break;
+        }
         mono.StartCoroutine(Round(mono, dataRepo));
     }
     public static void SelectDirectionRandomly(PlayerData playerData)

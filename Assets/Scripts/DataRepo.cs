@@ -1,6 +1,8 @@
 using System;
 using System.Collections.Generic;
+using TMPro;
 using UnityEngine;
+using UnityEngine.UI;
 
 public class DataRepo : MonoBehaviour
 {
@@ -8,6 +10,8 @@ public class DataRepo : MonoBehaviour
     [NonSerialized] public bool CouldPlayerEnterInput;
     public FixedJoystick Joystick;
     [NonSerialized] public int NumberOfRound= 5;
+    public TextMeshProUGUI ResultText;
+    public GameObject ResultPanel;
 }
 [Serializable]
 public class PlayerData
@@ -19,6 +23,7 @@ public class PlayerData
     [NonSerialized]public Vector2 HeadDirection;
     [NonSerialized]public Direction PlayerDirection;
     [NonSerialized]public int NumberOfMistake = 0;
+    public List<Image> Crosses;
 }
 public enum Direction
 {
